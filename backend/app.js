@@ -62,6 +62,15 @@ app.post("/updateBatch", async(req, res) => {
 });
 
 
+app.post("/updateVitalSign", async(req, res) => {
+    const payload = req.body;
+    
+    const userId = payload.user_id;
+    const device = payload.device;
+    const vital = payload.vital
+})
+
+
 app.delete("/deleteUser", async(req, res) => {
     const userIds = req.body.user_ids;
     const userInfo = require("./model/user_info");
