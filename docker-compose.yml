@@ -48,6 +48,16 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
+
+  frontend:
+    container_name: frontend
+    restart: always
+    build:
+      context: ./frontend
+    ports:
+      - 8888:8888
+    environment:
+      - TZ=Asia/Bangkok
   
   # nginx:
   #   container_name: nginx
